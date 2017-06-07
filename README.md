@@ -1,9 +1,11 @@
 # fetch_data
-
-#fetch data: (This simple code just downloads miniseed from IRIS)  
+# any comments or modification are really appreciated
+# feel free to contact Jun Xie
+# do please send email to junxie01@gmail.com
+# fetch data: (This simple code just downloads miniseed from IRIS)  
 #            executable file:"fetch_data" in directory "fetch_data"
 #            source file    :"fetch_data.f90", comple with make. This code is used to download daily mseed data.
-#                              Actually, with a little modification this code can be used to donwload earthquake data., e.g. #fetch_eq.f90
+#                              Actually, with a little modification this code can be used to donwload earthquake data., e.g. fetch_eq.f90
 #              how to run     :a parameter file is needed with the form
 #                              "station.list
 #                              year_begin day_begin year_end day_end
