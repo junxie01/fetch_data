@@ -1,0 +1,25 @@
+jun_CC: packages to caluclate NCF
+I, code needed:
+   a, meed2sac
+   b, FetchData
+II, script:
+   do_CC.bash      !this script call each code to do ambient noise processing of each step
+   how to run  ?
+   bash do_CC.bash station.lst 2009 1 2009 2
+III, file needed:
+   1, for_cc       ! paramter file 
+   2, station.lst  ! station list
+IV, parameter file format:
+LHZ 1              (componenet name, number; if larger than 1, component show be like LH )
+0 86400 0          (seed typei 0 for miniseed, length of record in seconds, overlapping percentage %)
+0.001 0.2 1 0      (low and high corner frequency in the response removement, remove response 1 or not 0, decimate 1 or not 0) 
+seed               (directory of the seed)
+resp               (directory of the response)
+mdat               (directory of the station information)
+SAC                (directory of the SAC file)
+SAC                (directory of the cut SAC file, just set it as the same as previous if cut not applied)
+0.01 0.2 0.02 0.2  (corner frequency of earthquake, corner frequency of target signal)
+0 1 1              (do one bit 1 or not 0, do time domain normalisation 1 or not 0, do frequency domain whittening) attention: just use one type of time domain normalisation
+90 500             (percentage of SAC file used, number of points in each lag of NCF)
+CC                 (directory of the out put NCF)
+STACK              (directory of the stacked waveform)
